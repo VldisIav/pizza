@@ -4,7 +4,7 @@ import React from "react";
 function Sort() {
 
   const [open, setOpen] = React.useState(false) 
-  const [selected, setSelected] = React.useState(false) 
+  const [selected, setSelected] = React.useState(0) 
   const sortActions = ['популярности', 'цене', 'алфавиту']
   const sortName = sortActions[selected]
 
@@ -12,6 +12,7 @@ function Sort() {
     setSelected(i)
     setOpen(false)
   }
+  
     return (
       <div className="sort">
         <div className="sort__label">
@@ -30,7 +31,7 @@ function Sort() {
           <b>Сортировка по:</b>
           <span onClick={() => setOpen(!open)}>{sortName}</span>
         </div>
-        
+
 
         {open && (
           <div className="sort__popup">
