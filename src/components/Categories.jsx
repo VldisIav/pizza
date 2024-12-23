@@ -9,6 +9,7 @@ function Categories() {
           <li>Острые</li>
           <li>Закрытые</li>
           
+          
         </ul>
       </div>
     )
